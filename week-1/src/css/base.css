@@ -1,0 +1,314 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+/* 
+`box-sizing: border-box;` is a CSS property that determines how an element's width and height
+are calculated. By default, the width and height of an element are calculated based on the content
+of the element and any padding or borders added to it. However, using box-sizing: border-box;
+changes this calculation to include the padding and border within the width and height of the element,
+so that any specified width or height of the element remains consistent even with padding and border added.
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  font-size: 0.95em; /* the font size for the paragraph will be 0.95 times the font size of its parent element. */
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ---- page container ---- */
+.page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- header container ---- */
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+}
+/* ---- name ---- */
+.name {
+  font-size: 1.35em;
+  margin: 0;
+}
+.name a {
+  display: block;
+  padding: 10px 15px;
+  color: #323232;
+}
+/* ---- navigator ---- */
+.main-nav {
+  display: flex;
+  margin-top: 5px;
+}
+.main-nav a {
+  font-size: 0.95em;
+  text-align: center;
+  display: block;
+  padding: 10px 15px;
+  color: #323232;
+}
+.main-nav a:hover {
+  color: #3acec2;
+}
+
+.menu-trigger {
+  display: none;
+}
+
+/* ---- banner ---- */
+.banner {
+  font-size: 30px;
+  text-align: center;
+  color: #323232;
+  background: #d5e1ef;
+  padding: 2em 0; /* imply 60px padding in top and bottom */
+}
+/* --- title --- */
+.title {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.box-container {
+  display: flex;
+  /* let flex item center in the container */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  flex-wrap: wrap; /* wrap flex items to next line if needed */
+  width: 1200px;
+  /* height: 300px; */
+  /* let container center in page */
+  margin: auto;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  font-size: 16px;
+  text-align: center;
+  background-color: #96a3b2;
+  width: 500px;
+  height: 120px;
+  margin: 16px;
+}
+
+.button-container {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-button {
+  border: none;
+  padding: 15px;
+  background-color: #e4f0fe;
+}
+
+/* Total width of content boxes should scale automatically with screen width. */
+@media (min-width: 800px) and (max-width: 1200px) {
+  /* Styles for screens between 800px and 1200px wide */
+  .box-container {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 45%;
+    max-width: 500px;
+    /* height: 120px; */
+    margin: 10px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  /* Styles for screens between 500px and 800px wide */
+  .box-container {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 40%;
+    max-width: 220px;
+    margin: 5px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .menu-trigger {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .menu-trigger div {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Styles for screens smaller than 500px */
+  .box-container {
+    width: 100%;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 90%;
+    margin: 3px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .menu-trigger {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .menu-trigger div {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+/* @media (max-width: 1200px) {
+  .box1,
+  .box2 {
+    width: 50%;
+  }
+
+  .box3,
+  .box4 {
+    width: 50%;
+    margin-top: -200px;
+  }
+} */
+
+/* ---- content ---- */
+/* .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  max-width: 1200px;
+  height: 60vh;
+  margin: auto;
+  justify-content: center; 
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  text-align: center;
+  background-color: #96a3b2;
+  width: 30em;
+  margin: 1em;
+} */
+
+/* @media (min-width: 1200px) {
+  .box1,
+  .box2 {
+    width: 50%;
+  }
+
+  .box3,
+  .box4 {
+    width: 50%;
+    margin-top: -200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .box1,
+  .box2 {
+    width: 25%;
+  }
+
+  .box3,
+  .box4 {
+    width: 50%;
+    margin-top: 0;
+  }
+} */
+
+/* ---- flex container ---- */
+/* .main-header,
+.main-nav,
+.content,
+.button-container {
+  display: flex;
+} */
+
+/* .main-header {
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+/* .content {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* .button-container {
+  justify-content: center;
+} */
+
+/* ================================= 
+  Media Queries
+==================================== */
+/* @media (min-width: 1200px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+} */
+
+/* @media (min-width: 1200px) {
+  .main-header,
+  .banner,
+  .row {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1150px;
+    justify-content: space-between;
+  }
+} */
