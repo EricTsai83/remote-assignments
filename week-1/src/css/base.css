@@ -20,16 +20,6 @@ body {
   margin: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-p {
-  font-size: 0.95em; /* the font size for the paragraph will be 0.95 times the font size of its parent element. */
-}
-
 /* ================================= 
   Base Layout Styles
 ==================================== */
@@ -44,12 +34,12 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: center;
   background-color: #f0f0f0;
 }
 /* ---- name ---- */
 .name {
-  font-size: 1.35em;
-  margin: 0;
+  font-size: 24px;
 }
 .name a {
   display: block;
@@ -57,22 +47,31 @@ p {
   color: #323232;
 }
 /* ---- navigator ---- */
+/* .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
 .main-nav {
   display: flex;
-  margin-top: 5px;
+  flex-direction: row; /* element in container will be positioned in a row from left to right */
+  font-size: 16px;
+}
+.main-nav li {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* just let <a> element can center in single <li> container */
+  margin-right: 20px;
 }
 .main-nav a {
-  font-size: 0.95em;
-  text-align: center;
-  display: block;
-  padding: 10px 15px;
   color: #323232;
 }
 .main-nav a:hover {
   color: #3acec2;
 }
 
-.menu-trigger {
+.menu-nav {
   display: none;
 }
 
@@ -133,11 +132,15 @@ p {
   .main-nav {
     display: none;
   }
-  .menu-trigger {
-    display: block;
+
+  .menu-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-right: 30px;
   }
-  .menu-trigger div {
+
+  .menu-nav .hamburger-menu div {
     width: 35px;
     height: 3px;
     background-color: black;
