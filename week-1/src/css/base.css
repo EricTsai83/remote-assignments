@@ -90,19 +90,18 @@ p {
   margin-top: 24px;
   margin-bottom: 8px;
 }
-
+/* --- content --- */
 .box-container {
   display: flex;
+  flex-direction: row;
   /* let flex item center in the container */
   justify-content: center; /* center horizontally */
-  align-items: center; /* center vertically */
   flex-wrap: wrap; /* wrap flex items to next line if needed */
-  width: 1200px;
-  /* height: 300px; */
+  width: 100%;
+  max-width: 1200px;
   /* let container center in page */
   margin: auto;
 }
-
 .box1,
 .box2,
 .box3,
@@ -110,67 +109,34 @@ p {
   font-size: 16px;
   text-align: center;
   background-color: #96a3b2;
-  width: 500px;
+  width: 45%; /* need to set smaller than 50%, because we need give margin some space */
   height: 120px;
-  margin: 16px;
+  margin: 5px;
 }
-
+/* --- button --- */
 .button-container {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
-
 .submit-button {
   border: none;
   padding: 15px;
   background-color: #e4f0fe;
 }
 
-/* Total width of content boxes should scale automatically with screen width. */
-@media (min-width: 800px) and (max-width: 1200px) {
-  /* Styles for screens between 800px and 1200px wide */
-  .box-container {
-    width: 80%;
-    max-width: 1200px;
-  }
-
-  .box1,
-  .box2,
-  .box3,
-  .box4 {
-    width: 45%;
-    max-width: 500px;
-    /* height: 120px; */
-    margin: 10px;
-  }
-}
-
-@media (min-width: 501px) and (max-width: 800px) {
-  /* Styles for screens between 500px and 800px wide */
-  .box-container {
-    width: 80%;
-    max-width: 800px;
-  }
-
-  .box1,
-  .box2,
-  .box3,
-  .box4 {
-    width: 40%;
-    max-width: 220px;
-    margin: 5px;
-  }
-
+/* ================================= 
+  Media Queries
+==================================== */
+@media (max-width: 800px) {
+  /* Styles for screens smaller than 500px */
   .main-nav {
     display: none;
   }
-
   .menu-trigger {
     display: block;
     margin-right: 30px;
   }
-
   .menu-trigger div {
     width: 35px;
     height: 3px;
@@ -182,133 +148,16 @@ p {
 @media (max-width: 500px) {
   /* Styles for screens smaller than 500px */
   .box-container {
+    display: flex;
+    flex-direction: column;
+    /* let flex item center in the container */
+    align-content: center; /* center horizontally */
     width: 100%;
   }
-
   .box1,
   .box2,
   .box3,
   .box4 {
-    width: 90%;
-    margin: 3px;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .menu-trigger {
-    display: block;
-    margin-right: 30px;
-  }
-
-  .menu-trigger div {
-    width: 35px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-  }
-}
-/* @media (max-width: 1200px) {
-  .box1,
-  .box2 {
-    width: 50%;
-  }
-
-  .box3,
-  .box4 {
-    width: 50%;
-    margin-top: -200px;
-  }
-} */
-
-/* ---- content ---- */
-/* .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80vw;
-  max-width: 1200px;
-  height: 60vh;
-  margin: auto;
-  justify-content: center; 
-}
-
-.box1,
-.box2,
-.box3,
-.box4 {
-  text-align: center;
-  background-color: #96a3b2;
-  width: 30em;
-  margin: 1em;
-} */
-
-/* @media (min-width: 1200px) {
-  .box1,
-  .box2 {
-    width: 50%;
-  }
-
-  .box3,
-  .box4 {
-    width: 50%;
-    margin-top: -200px;
-  }
-}
-
-@media (min-width: 992px) {
-  .box1,
-  .box2 {
-    width: 25%;
-  }
-
-  .box3,
-  .box4 {
-    width: 50%;
-    margin-top: 0;
-  }
-} */
-
-/* ---- flex container ---- */
-/* .main-header,
-.main-nav,
-.content,
-.button-container {
-  display: flex;
-} */
-
-/* .main-header {
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
-/* .content {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-/* .button-container {
-  justify-content: center;
-} */
-
-/* ================================= 
-  Media Queries
-==================================== */
-/* @media (min-width: 1200px) {
-  .main-header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-} */
-
-/* @media (min-width: 1200px) {
-  .main-header,
-  .banner,
-  .row {
     width: 80%;
-    margin: 0 auto;
-    max-width: 1150px;
-    justify-content: space-between;
   }
-} */
+}
