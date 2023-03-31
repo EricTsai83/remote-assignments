@@ -47,11 +47,9 @@ body {
   color: #323232;
 }
 /* ---- navigator ---- */
-/* .nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
+.menu-nav {
+  display: none;
+}
 
 .main-nav {
   display: flex;
@@ -69,10 +67,6 @@ body {
 }
 .main-nav a:hover {
   color: #3acec2;
-}
-
-.menu-nav {
-  display: none;
 }
 
 /* ---- banner ---- */
@@ -128,7 +122,7 @@ body {
   Media Queries
 ==================================== */
 @media (max-width: 800px) {
-  /* Styles for screens smaller than 500px */
+  /* Styles for screens smaller than 800px */
   .main-nav {
     display: none;
   }
