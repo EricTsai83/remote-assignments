@@ -10,7 +10,7 @@ changes this calculation to include the padding and border within the width and 
 so that any specified width or height of the element remains consistent even with padding and border added.
 */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 body {
@@ -50,30 +50,36 @@ body {
 }
 
 /* ---- navigator ---- */
-.menu-nav {
+.hamburger-menu {
   display: none;
 }
 
-.main-nav {
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.item-menu {
   display: flex;
   flex-direction: row;
-  /* element in container will be positioned in a row from left to right */
   font-size: 16px;
 }
 
-.main-nav li {
-  display: flex;
+.item-menu li {
+  /* display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; */
   /* just let <a> element can center in single <li> container */
   margin-right: 20px;
 }
 
-.main-nav a {
+.item-menu a {
   color: #323232;
 }
 
-.main-nav a:hover {
+.item-menu a:hover {
   color: #3acec2;
 }
 
@@ -141,18 +147,18 @@ body {
 @media (max-width: 800px) {
 
   /* Styles for screens smaller than 800px */
-  .main-nav {
+  .item-menu {
     display: none;
   }
 
-  .menu-nav {
+  .hamburger-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 30px;
   }
 
-  .menu-nav .hamburger-menu div {
+  .hamburger-menu .hamburger div {
     width: 35px;
     height: 3px;
     background-color: black;
