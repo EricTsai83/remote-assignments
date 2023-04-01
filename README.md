@@ -1,6 +1,6 @@
-# remote-assignments
+# Remote Assignments
 
-## AppWorks School assignments
+## Assignments
 * week-1 homework: https://erictsai83.github.io/remote-assignments/week-1/src/index.html
 
 ## Reference
