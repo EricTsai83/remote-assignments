@@ -37,15 +37,18 @@ body {
   align-content: center;
   background-color: #f0f0f0;
 }
+
 /* ---- name ---- */
 .name {
   font-size: 24px;
 }
+
 .name a {
   display: block;
   padding: 10px 15px;
   color: #323232;
 }
+
 /* ---- navigator ---- */
 .menu-nav {
   display: none;
@@ -53,18 +56,23 @@ body {
 
 .main-nav {
   display: flex;
-  flex-direction: row; /* element in container will be positioned in a row from left to right */
+  flex-direction: row;
+  /* element in container will be positioned in a row from left to right */
   font-size: 16px;
 }
+
 .main-nav li {
   display: flex;
   flex-direction: row;
-  align-items: center; /* just let <a> element can center in single <li> container */
+  align-items: center;
+  /* just let <a> element can center in single <li> container */
   margin-right: 20px;
 }
+
 .main-nav a {
   color: #323232;
 }
+
 .main-nav a:hover {
   color: #3acec2;
 }
@@ -75,26 +83,32 @@ body {
   text-align: center;
   color: #323232;
   background: #d5e1ef;
-  padding: 2em 0; /* imply 60px padding in top and bottom */
+  padding: 2em 0;
+  /* imply 60px padding in top and bottom */
 }
+
 /* --- title --- */
 .title {
   text-align: center;
   margin-top: 24px;
   margin-bottom: 8px;
 }
+
 /* --- content --- */
 .box-container {
   display: flex;
   flex-direction: row;
   /* let flex item center in the container */
-  justify-content: center; /* center horizontally */
-  flex-wrap: wrap; /* wrap flex items to next line if needed */
+  justify-content: center;
+  /* center horizontally */
+  flex-wrap: wrap;
+  /* wrap flex items to next line if needed */
   width: 100%;
   max-width: 1200px;
   /* let container center in page */
   margin: auto;
 }
+
 .box1,
 .box2,
 .box3,
@@ -102,16 +116,19 @@ body {
   font-size: 16px;
   text-align: center;
   background-color: #96a3b2;
-  width: 45%; /* need to set smaller than 50%, because we need give margin some space */
+  width: 45%;
+  /* need to set smaller than 50%, because we need give margin some space */
   height: 120px;
   margin: 5px;
 }
+
 /* --- button --- */
 .button-container {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .submit-button {
   border: none;
   padding: 15px;
@@ -122,6 +139,7 @@ body {
   Media Queries
 ==================================== */
 @media (max-width: 800px) {
+
   /* Styles for screens smaller than 800px */
   .main-nav {
     display: none;
@@ -143,14 +161,17 @@ body {
 }
 
 @media (max-width: 500px) {
+
   /* Styles for screens smaller than 500px */
   .box-container {
     display: flex;
     flex-direction: column;
     /* let flex item center in the container */
-    align-content: center; /* center horizontally */
+    align-content: center;
+    /* center horizontally */
     width: 100%;
   }
+
   .box1,
   .box2,
   .box3,
