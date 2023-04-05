@@ -1,0 +1,287 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* color */
+:root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  --clr-neutral: #ddd;
+  --clr-light: #fff;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+  margin: 0;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ---- page container ---- */
+.page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- header container ---- */
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #f0f0f0;
+}
+
+/* ---- name ---- */
+.name {
+  font-size: 24px;
+}
+
+.name a {
+  display: block;
+  padding: 10px 15px;
+  color: #323232;
+}
+
+/* ---- navigator ---- */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.nav-toggle,
+.nav-list {
+  display: none;
+}
+
+.item-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.item-menu li {
+  margin-right: 20px;
+}
+
+.item-menu a {
+  color: #323232;
+}
+
+.item-menu a:hover {
+  color: #3acec2;
+}
+
+
+
+
+
+/* ---- banner ---- */
+.banner {
+  font-size: 30px;
+  text-align: center;
+  color: #323232;
+  background: #d5e1ef;
+  padding: 2em 0;
+  /* imply 60px padding in top and bottom */
+}
+
+/* --- title --- */
+.title {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+/* --- content --- */
+.box-container {
+  display: flex;
+  flex-direction: row;
+  /* let flex item center in the container */
+  justify-content: center;
+  /* center horizontally */
+  flex-wrap: wrap;
+  /* wrap flex items to next line if needed */
+  width: 100%;
+  max-width: 1200px;
+  /* let container center in page */
+  margin: auto;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  font-size: 16px;
+  text-align: center;
+  background-color: #96a3b2;
+  width: 45%;
+  /* need to set smaller than 50%, because we need give margin some space */
+  height: 120px;
+  margin: 5px;
+}
+
+/* --- button --- */
+.button-container {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-button {
+  border: none;
+  padding: 15px;
+  background-color: #e4f0fe;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (max-width: 800px) {
+
+  /* Styles for screens smaller than 800px */
+  .item-menu {
+    display: none;
+  }
+
+  .nav {
+    background: var(--clr-light);
+    right: 0;
+    box-shadow: 0 0 3em rgba(0, 0, 0, .15);
+
+    transform: translateX(100%);
+    transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+  }
+
+  .nav-toggle,
+  .nav-list {
+    display: block;
+  }
+
+  .nav-toggle {
+    left: 0;
+    transform: translateX(-100%);
+    background: var(--clr-light);
+    padding: 1em .5em;
+    border: 0;
+    border-radius: .25em 0 0 .25em;
+    z-index: 2
+  }
+
+
+  .nav-list {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 3em 6em;
+    z-index: 1
+  }
+
+  .nav-item {
+    margin-bottom: 3em;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--clr-dark);
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+    color: var(--clr-primary);
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 2em;
+    height: 3px;
+    background: var(--clr-dark);
+
+    transition: transform 300ms ease-in-out, opacity 200ms linear;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before {
+    bottom: 6px;
+  }
+
+  .hamburger::after {
+    top: 6px;
+  }
+
+  /* Navigation open styles */
+
+  .nav-open .nav-toggle {
+    transform: translateX(-100%);
+
+  }
+
+  /* Change this stuff below */
+  .nav-open .hamburger {
+    background: var(--clr-light);
+  }
+
+  .nav-open .hamburger::before {
+    transform: translateY(6px) rotate(45deg);
+
+  }
+
+  .nav-open .hamburger::after {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+
+
+
+
+
+
+}
+
+@media (max-width: 500px) {
+
+  /* Styles for screens smaller than 500px */
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    /* let flex item center in the container */
+    align-content: center;
+    /* center horizontally */
+    width: 100%;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 80%;
+  }
+}
