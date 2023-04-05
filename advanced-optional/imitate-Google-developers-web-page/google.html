@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+    The charset is a special field that lets you specify the character encoding
+    used for the page so that the browser can display it properly. 
+    -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- specifies the area of the window in which web content can be seen -->
+    <!-- initial-scale: Specify the screen width as the device width, and the initial zoom ratio of screen loading is 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- the following meta tags are related to SEO -->
+    <title>Google Developers</title>
+    <!-- state the author of the page -->
+    <meta name="author" content="Eric Tsai" />
+    <!-- specify the language of the webpage to search engines.  -->
+    <meta name="language" content="english" />
+    <!-- tells search engines how to crawl or index a certain page -->
+    <meta name="robots" content="index,follow" />
+    <!-- provides a brief description of the web page -->
+    <meta
+      name="description"
+      content="Everything you need to build better apps." />
+    <!-- tells Google not to show the sitelinks search box for your page when showing search results  -->
+    <meta name="google" content="nositelinkssearchbox" />
+    <!-- tells Google you don’t want to provide an automatic translation for your page if the user uses a different language -->
+    <meta name="googlebot" content="”notranslate”" />
+    <!-- specifies the last modified date and time on which you have made certain changes -->
+    <meta name="revised" content="Saturday, April 1th, 2023, 6:09 pm" />
+    <!-- 
+    specifies the expected audience for your page
+    general, mature, restricted, adult, 14 years, safe for kids
+    -->
+    <meta name="rating" content="safe for kids" />
+    <!-- specifies a Copyright  -->
+    <meta name="copyright" content="Eric Tsai" />
+
+    <!-- Open Graph Protocol: deal with social media cards -->
+    <!-- og:title - Title of the content being shared -->
+    <meta property="og:title" content="Google Developers" />
+    <!-- og:type - Type of content, such as article, video, or music -->
+    <meta property="og:type" content="website" />
+    <!-- og:url - URL of the webpage -->
+    <meta property="og:url" content="https://www.example.com" />
+    <!-- og:image - Image associated with the content -->
+    <meta property="og:image" content="https://www.example.com/image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <!-- og:description - Short description of the content being shared -->
+    <meta
+      property="og:description"
+      content="Everything you need to build better apps." />
+    <!-- og:site_name - Name of the website -->
+    <meta property="og:site_name" content="Google Developers" />
+    <!-- og:locale - Language and location of the content -->
+    <meta property="og:locale" content="en" />
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header
+      no-lower-row=""
+      top-row--height="49"
+      bottom-row--height="0"
+      bottom-tabs--height="0"
+      bottom-row--hidden=""
+      fixed="">
+      <!-- <nav>
+        <button
+          type="button"
+          id="devsite-hamburger-menu"
+          class="nav-toggle"
+          data-label="Navigation menu button"
+          aria-label="Open menu">
+          <span class="hamburger"></span>
+        </button>
+        <ul>
+          <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Developer Profile</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+        </ul>
+      </nav> -->
+
+      <nav class="nav">
+        <button class="nav-toggle">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Developer Profile</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <h1 class="title">Hamburgers</h1>
+        <p>
+          Lorem ipsum dolor, <a href="#">sit amet consectetur</a> adipisicing
+          elit. Aliquid sapiente perferendis nulla sed consequuntur eveniet.
+          Itaque veritatis qui labore quia odio nihil, magni soluta facilis
+          necessitatibus cumque repellendus optio laborum.
+        </p>
+      </div>
+      <!-- 
+        `data-label` is not a standard HTML attribute, but rather a custom data
+        attribute that can be used to store additional data for an HTML element.
+        
+        `aria-label` attribute is used to describe the purpose or function of an
+        element to assistive technologies, such as screen readers.
+        -->
+      <!-- <div class="devsite-product-name-wrapper">
+        <a href="#" class="devsite-site-logo-link" data-label="Site logo">
+          <img
+            src="./Google Developers_files/lockup.svg"
+            class="devsite-site-logo"
+            alt="Google Developers" />
+        </a>
+
+        <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+            <li
+              class="devsite-breadcrumb-item devsite-has-google-wordmark"></li>
+          </ul>
+        </span>
+      </div> -->
+    </header>
+    <!-- <figure>
+      <img src="photo.png" width="320" alt="My Profile Photo" />
+      <figcaption>A photo of myself on a beach in 2015</figcaption>
+    </figure> -->
+  </body>
+</html>

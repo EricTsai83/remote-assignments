@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  --clr-neutral: #ddd;
+  --clr-light: #fff;
+}
+
+/* body {
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: var(--clr-body);
+  background: var(--clr-neutral);
+  overflow-x: hidden;
+} */
+
+a {
+  color: var(--clr-primary);
+}
+
+/* .content {
+  background: var(--clr-light);
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, .15);
+} */
+
+
+
+.title {
+  margin: 0 0 .5em;
+  font-weight: 900;
+  color: var(--clr-primary);
+  line-height: .8;
+}
+
+.nav {
+  background: var(--clr-light);
+  /* 
+    An absolute attribute is a type of attribute that specifies a value that is fixed
+    and independent of any other factors or elements on the page.
+    */
+  position: absolute;
+  /* 
+    The "right" attribute is used in conjunction with absolute positioning to
+    specify the distance between the right edge of an element and the right edge
+    of its positioned parent element. */
+  right: 0;
+  box-shadow: 0 0 3em rgba(0, 0, 0, .15);
+  /* 
+    1. The `transform` property is used to apply different visual effects to an element.
+    2. `translateX` is used to move an element along the X and/or Y axis.is used to move an
+    element along the X axis.
+    */
+  transform: translateX(100%);
+  /* 
+    1. `transition`: It can transit the properties of an element over a duration of <n> milliseconds,
+    2. `cubic-bezier(.5, 0, .5, 1)`: This is the timing function used for the transition.
+       A timing function defines the speed curve of an animation, specifying how fast or
+       slow the animation progresses over time.
+    */
+  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3em 6em;
+}
+
+.nav-item {
+  margin-bottom: 3em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  transform: translateX(-100%);
+  background: var(--clr-light);
+  padding: 1em .5em;
+  border: 0;
+  border-radius: .25em 0 0 .25em;
+}
+
+
+
+/*
+1. `display: block`: in order to let us use background attribute in the next section 
+2. `position: relative` works the same way as `position: static`,
+but it lets you change an element's position.
+ */
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+/* 
+.hamburger::before 是在 .hamburger 這個 element 前面加上一個黑色區塊
+.hamburger::after 以此類推
+因為 .hamburger 是 block element 所以三者會垂直排列
+*/
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 2em;
+  height: 3px;
+  background: var(--clr-dark);
+
+  transition: transform 300ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  bottom: 6px;
+}
+
+.hamburger::after {
+  top: 6px;
+}
+
+
+/* Navigation open styles */
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+/* Change this stuff below */
+.nav-open .hamburger {
+  background: var(--clr-light);
+
+}
+
+
+.nav-open .hamburger::before {
+  transform: translateY(6px) rotate(45deg);
+
+}
+
+.nav-open .hamburger::after {
+  transform: translateY(-6px) rotate(-45deg);
+}

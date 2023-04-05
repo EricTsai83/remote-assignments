@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "tabWidth": 2,
+  "bracketSpacing": false,
+  "bracketSameLine": true,
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "css",
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
