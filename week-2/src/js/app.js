@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   navToggle.addEventListener("click", () => {
     // add class='nav-open' in the body element
     document.body.classList.toggle("nav-open");
+    document.querySelector(".nav-list").style.transition =
+      "transform 300ms cubic-bezier(.5, 0, .5, 1)";
   });
   // action for click the button
   const submitButton = document.querySelector(".submit-button");
