@@ -68,7 +68,7 @@ body {
   position: absolute;
   right: 0;
   transform: translateX(100%);
-  overflow-x: hidden;
+  box-shadow: 0 0 3em rgba(0, 0, 0, .15);
 }
 
 .nav-item {
