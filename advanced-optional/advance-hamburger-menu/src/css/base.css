@@ -63,7 +63,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: scroll;
   padding: 1em 8em 1em 1em;
   position: absolute;
   right: 0;
