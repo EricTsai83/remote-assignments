@@ -20,7 +20,7 @@ console.log(max([5, 2, 7, 1, 6])); // expected output: 7
 // solution 2: use two-pointer technique
 function max(numbers) {
   let maxVal = numbers[0];
-  let left = 0;
+  let left = 1;
   let right = numbers.length - 1;
   while (left <= right) {
     if (numbers[left] > maxVal) {
