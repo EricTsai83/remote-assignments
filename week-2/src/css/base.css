@@ -53,22 +53,22 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  background: var(--clr-light);
+  background-color: transparent;
 }
 
-/* ---- navigator's list ---- */
+/* ---- side navigator ---- */
 .nav-list {
   background: var(--clr-light);
   box-shadow: 0 0 3em rgba(0, 0, 0, .15);
   display: flex;
   flex-direction: column;
-  align-content: start;
   height: 100vh;
-  overflow: scroll;
+  /* overflow: scroll; */
   padding: 1em 8em 1em 1em;
-  position: absolute;
+  position: fixed;
   right: 0;
   transform: translateX(100%);
+  z-index: 9998;
 }
 
 .nav-item {
@@ -91,16 +91,18 @@ body {
 
 /* ---- navigator's toggle ---- */
 .nav-toggle {
-  background: var(--clr-gray);
   border: 0;
   border-radius: .25em 0 0 .25em;
-  z-index: 1;
+  z-index: 9999;
+
 }
 
 /* toggle format (hamburger) */
 .hamburger {
   display: block;
   position: relative;
+
+
 }
 
 .hamburger,
@@ -130,17 +132,16 @@ body {
 /* open styles for navigator's toggle*/
 
 .nav-open .nav-list {
-  transform: translateX(0%);
-  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+  transform: translateX(5%);
 }
 
 .nav-open .nav-toggle {
-  background: var(--clr-light);
+  background-color: transparent;
 }
 
 
 .nav-open .hamburger {
-  background: var(--clr-light);
+  background-color: transparent;
 
 }
 
@@ -234,6 +235,7 @@ body {
   margin: 5px;
 }
 
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -246,7 +248,7 @@ body {
 
   .nav-list {
     all: unset;
-    background: var(--clr-gray);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
