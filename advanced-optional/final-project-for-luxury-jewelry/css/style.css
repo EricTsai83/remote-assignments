@@ -1,0 +1,479 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* color variable*/
+:root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  --clr-neutral: #ddd;
+  --clr-light: #fff;
+  --clr-light-green: #3acec2;
+  --clr-gray: #767676;
+  --clr-black: #000000;
+  --clr-light-brown: #e7e3de;
+  --clr-brown: #85745b;
+}
+
+body {
+  line-height: 1.6;
+  /* Let the element which is out of the window be hidden */
+  overflow-x: hidden;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* header */
+.header-first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 20px;
+}
+
+/* hamburger */
+.side-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button {
+  border: 0;
+  background-color: transparent;
+  vertical-align: center;
+}
+
+#hamburger-center-line {
+  display: block;
+  position: relative;
+}
+
+#hamburger-center-line,
+#hamburger-center-line::before,
+#hamburger-center-line::after {
+  width: 1.8em;
+  height: 2px;
+  background-color: var(--clr-gray);
+}
+
+#hamburger-center-line::before,
+#hamburger-center-line::after {
+  content: "";
+  position: absolute;
+  width: 1.2em;
+  transform: translateX(-50%);
+}
+
+#hamburger-center-line::before {
+  bottom: 5px;
+}
+
+#hamburger-center-line::after {
+  top: 5px;
+}
+
+/* logo */
+.header-center-img-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* icon heart */
+.gg-heart,
+.gg-heart::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+.gg-heart {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(
+      calc(-10px / 2 * var(--ggs, 1)),
+      calc(-6px / 2 * var(--ggs, 1))
+    )
+    rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+.gg-heart::after,
+.gg-heart::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.gg-heart::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+.gg-heart::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+.gg-heart,
+.gg-heart::before,
+.gg-heart::after {
+  border-color: var(--clr-gray);
+}
+
+/* header seperator */
+.header-seperator {
+  display: block;
+  background-color: var(--clr-gray);
+  width: 100%;
+  height: 0.5px;
+}
+
+/* second row in header */
+.header-second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  display: none;
+}
+
+/* search icon */
+.gg-search {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 100%;
+}
+.gg-search::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 8px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 12px;
+}
+
+/* Style the search box inside the navigation bar */
+.header-second-row .search-box {
+  border: none;
+  margin-left: 16px;
+  width: 100%;
+}
+
+.search-box:focus {
+  outline: none;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-img {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Optima nova LT Pro", sans-serif;
+  margin-bottom: 20px;
+}
+
+.content > p {
+  width: 70%;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Optima nova LT Pro", sans-serif;
+  color: var(--clr-gray);
+  margin-bottom: 30px;
+}
+
+.content-bnt {
+  background-color: var(--clr-black);
+  width: 250px;
+  height: 48px;
+  padding: 0px 30px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.content-bnt p {
+  font-size: 15px;
+  color: var(--clr-light);
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-light-brown);
+  padding: 40px 0px 30px 0px;
+  width: 100%;
+}
+
+.footer-subscribe h3 {
+  font-family: "Optima nova LT Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none solid rgb(51, 51, 51);
+  text-align: center;
+  color: rgb(51, 51, 51);
+  letter-spacing: 1.5px;
+}
+.footer-subscribe img {
+  width: 15px;
+  margin: 20px;
+}
+
+.footer-subscribe > p {
+  text-align: center;
+  font-family: "Optima nova LT Pro", sans-serif;
+  font-weight: lighter;
+  color: rgb(51, 51, 51);
+  width: 65%;
+}
+
+.input-email {
+  font-family: "Optima nova LT Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none solid rgb(118, 118, 118);
+  text-align: start;
+  height: 48px;
+  width: 300px;
+  margin: 30px;
+}
+.subscribe-btn {
+  background-color: var(--clr-black);
+  width: 200px;
+  height: 48px;
+  text-align: center;
+}
+.subscribe-btn p {
+  font-size: 15px;
+  color: var(--clr-light);
+}
+
+/* footer-social */
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.gg-facebook {
+  color: var(--clr-brown);
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 20px;
+  height: 20px;
+}
+
+.gg-facebook::after,
+.gg-facebook::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.gg-facebook::before {
+  width: 8px;
+  height: 20px;
+  border-left: 4px solid;
+  border-top: 4px solid;
+  border-top-left-radius: 5px;
+  left: 6px;
+}
+
+.gg-facebook::after {
+  width: 10px;
+  height: 4px;
+  background: currentColor;
+  top: 7px;
+  left: 4px;
+  transform: skew(-5deg);
+}
+
+/* instagram */
+.gg-instagram {
+  color: var(--clr-brown);
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.gg-instagram::after,
+.gg-instagram::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-instagram::after {
+  border: 2px solid;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  top: 3px;
+}
+
+.gg-instagram::before {
+  border-radius: 3px;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  right: 1px;
+  top: 1px;
+}
+
+/* youtube */
+.gg-youtube {
+  color: var(--clr-brown);
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 10px;
+  box-shadow: 0 0 0 2px;
+  border-radius: 15px 15px 15px 15px / 45px 45px 45px 45px;
+}
+.gg-youtube::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  border-left: 4px solid currentColor;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+@media (min-width: 930px) {
+  .side-menu {
+    display: none;
+  }
+
+  #mobile-search-icon {
+    display: none;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header-second-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-item a {
+    font-size: 13px;
+    font-family: "Optima nova LT Pro", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-decoration: none solid rgb(51, 51, 51);
+    color: var(--clr-brown);
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: center; */
+  }
+
+  article {
+    width: 450px;
+    height: 800px;
+  }
+  article .content-img {
+    width: 100%;
+    height: 450px;
+  }
+
+  article .content > p {
+    width: 400px;
+    height: 100px;
+  }
+}

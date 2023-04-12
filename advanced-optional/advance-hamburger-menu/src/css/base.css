@@ -21,7 +21,6 @@ body {
   font-family: "Varela Round", sans-serif;
   line-height: 1.6;
   color: #3a3a3a;
-  margin: 0;
   /* Let the element which is out of the window be hidden */
   overflow-x: hidden;
 }

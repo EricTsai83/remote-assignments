@@ -1,0 +1,51 @@
+/* DOCUMENT INFORMATION
+	- Document: Jukebox Theme
+	- Version:  1.2.3
+	- Client:   
+	- Author:   Eric Tsai
+*/
+
+/* STYLE
+Colors
+	- default body text  #ffffcc
+	- subtitle h2 text   #ff9900
+	- form input borders #cc9933
+	- default p text     #f0f0f0
+	- pre borders        #ffff99
+
+Fonts
+	- default body text  Arial, Helvetica Neue, Helvetica, sans-serif
+	- subtitle h2 text   Garamond, Hoefler Text, Times New Roman, Times, serif
+	- form input text    Cambria, Georgia, Times, Times New Roman, Times, serif
+	- default p text     Copperplate Light, Copperplate Gothic Light, serif
+	- pre and code       Consolas, Lucida Console, Monaco, monospace
+
+Indent style
+  - Indent selectors of child elements
+*/
+
+/*
+CSS DIRECTORY
+	1. =GLOBAL
+	2. =PRIMARY
+	3. =HEADER
+	4. =SIDEBAR
+	5. =FOOTER
+*/
+
+/* === GLOBAL SETTINGS === */
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+  padding: 0;
+}
+/* ===GLOBAL=== */
+
+/* ===PRIMARY=== */
+
+/* ===HEADER=== */
+
+/* ===SIDEBAR=== */
+
+/* ===FOOTER=== */
