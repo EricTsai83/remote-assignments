@@ -2,7 +2,7 @@
   "editor.formatOnSave": true,
   "tabWidth": 2,
   "indent_size": 2,
-  "bracketSpacing": false,
+  "bracketSpacing": true,
   "bracketSameLine": true,
   "semi": true,
   "trailingComma": "all",
