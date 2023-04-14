@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3001;
 
 // tell express which template is used
 // app.set('view engine', 'pug');
@@ -15,6 +16,4 @@ app.use(getData);
 
 app.use(express.static('public'));
 
-app.listen(3000, () => {
-  console.log('The application is running on localhost:3000!');
-});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
