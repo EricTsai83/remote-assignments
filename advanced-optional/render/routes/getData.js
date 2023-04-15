@@ -7,7 +7,6 @@ router.get('/getData', (req, res) => {
 
   if (number && isPositiveInteger(number)) {
     number = Number(number);
-    console.log((1 + number) * number);
     let numberSum = ((1 + number) * number) / 2;
     res.send(numberSum.toString());
   } else if (number) {
@@ -20,6 +19,6 @@ router.get('/getData', (req, res) => {
 module.exports = router;
 
 function isPositiveInteger(str) {
-  var n = Math.floor(Number(str));
+  const n = Math.floor(Number(str));
   return n !== Infinity && String(n) === str && n >= 0;
 }
