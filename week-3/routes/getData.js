@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/getData', (req, res) => {
   // `res.send` is used to send a plain text or HTML response to the client.
-  const { number } = req.query;
+  let { number } = req.query;
 
   if (number && isPositiveInteger(number)) {
     number = Number(number);
