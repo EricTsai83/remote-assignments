@@ -3,11 +3,11 @@ const router = express.Router();
 
 router.get('/getData', (req, res) => {
   // `res.send` is used to send a plain text or HTML response to the client.
-  let { number } = req.query;
+  const { number } = req.query;
 
   if (number && isPositiveInteger(number)) {
     number = Number(number);
-    let numberSum = ((1 + number) * number) / 2;
+    const numberSum = ((1 + number) * number) / 2;
     res.send(numberSum.toString());
   } else if (number) {
     res.send('Wrong Parameter');
@@ -19,6 +19,6 @@ router.get('/getData', (req, res) => {
 module.exports = router;
 
 function isPositiveInteger(str) {
-  var n = Math.floor(Number(str));
+  const n = Math.floor(Number(str));
   return n !== Infinity && String(n) === str && n >= 0;
 }
