@@ -23,6 +23,9 @@ app.use(getData);
 const myName = require('./routes/myName');
 app.use(myName);
 
+const trackName = require('./routes/trackName');
+app.use(trackName);
+
 app.use(express.static('public'));
 
 // need to use `process.env.PORT` to let you deploy web server on render.com
