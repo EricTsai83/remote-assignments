@@ -3,7 +3,9 @@ const router = express.Router();
 
 router.get('/trackName', (req, res) => {
   let { name } = req.query;
-  res.cookie('name', name);
+  if (name) {
+    res.cookie('name', name);
+  }
   res.redirect('/myName');
 });
 
