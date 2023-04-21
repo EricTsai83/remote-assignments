@@ -1,0 +1,151 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* color variable*/
+:root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  --clr-neutral: #ddd;
+  --clr-light: #fff;
+  --clr-light-green: #3acec2;
+  --clr-gray: #f0f0f0;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+  margin: 0;
+  /* Let the element which is out of the window be hidden */
+  overflow-x: hidden;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  margin-top: -1px;
+  border: 1px solid #d0d7de;
+  border-collapse: collapse;
+  background-color: transparent;
+  padding: 10px 10px;
+}
+
+.name {
+  display: inline-block;
+  margin: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0969da;
+  cursor: pointer;
+}
+
+.visibility {
+  display: inline-block;
+  margin: 6px;
+  border: 1px solid #d0d7de;
+  border-radius: 24px;
+  background-color: transparent;
+  padding: 0px 7px;
+  color: #656d76;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.description {
+  margin: auto 6px;
+}
+
+.topic {
+  display: inline-block;
+  margin-left: 7px;
+  border-radius: 24px;
+  padding: 0px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #0969da;
+  background-color: #ddf4ff;
+  cursor: pointer;
+}
+
+.more-button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #0969da;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 800px) {
+  /* Styles for screens larger than 800px */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    margin-bottom: 0;
+    color: #323232;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Styles for screens smaller than 500px */
+  .box-container-1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 80%;
+  }
+
+  .box-container-2 {
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+
+  .box5,
+  .box6,
+  .box7,
+  .box8 {
+    width: 80%;
+  }
+}

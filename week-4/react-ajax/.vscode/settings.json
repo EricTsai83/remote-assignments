@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "Mangata",
+    "nositelinkssearchbox",
+    "Parens",
+    "seperator",
+    "stylelint"
+  ],
+  "editor.tabSize": 2,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
