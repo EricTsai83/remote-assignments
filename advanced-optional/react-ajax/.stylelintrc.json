@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "alpha-value-notation": "number",
+    "selector-type-case": "lower",
+    "color-no-hex": true,
+    "comment-no-empty": true,
+    "function-url-quotes": "always",
+    "shorthand-property-no-redundant-values": true
+  }
+}
