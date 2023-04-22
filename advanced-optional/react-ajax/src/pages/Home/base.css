@@ -37,6 +37,10 @@ body {
   align-items: center;
 }
 
+.repo-result {
+  width: 100vw;
+}
+
 .item {
   margin-top: -1px;
   border: 1px solid #d0d7de;
@@ -95,30 +99,6 @@ body {
 /* ================================= 
   Media Queries
 ==================================== */
-@media (min-width: 800px) {
-  /* Styles for screens larger than 800px */
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav-list {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
-    margin-bottom: 0;
-    color: #323232;
-  }
-}
 
 @media (min-width: 900px) {
   /* Styles for screens smaller than 900px */
