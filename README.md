@@ -4,6 +4,8 @@
 
 - week-1 homework: https://erictsai83.github.io/remote-assignments/week-1/src/index.html
 - week-2 homework: https://erictsai83.github.io/remote-assignments/week-2/src/index.html
+- week-4 homework: https://erictsai83.github.io/remote-assignments/week-4/src/index1.html
+- week-4 homework: https://erictsai83.github.io/remote-assignments/week-4/src/index2.html
 
 ## Advanced Learning
 
