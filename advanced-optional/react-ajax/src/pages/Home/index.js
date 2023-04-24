@@ -7,24 +7,30 @@ import './normalize.css';
 import './base.css';
 
 const Home = () => {
-  const [pageItemNum, setPageItemNum] = useState(5);
+  const [page, setPage] = useState(5);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
-  // const submittingStatus = useRef(false);
 
+  let isApiSubscribed = true;
   useEffect(() => {
-    fetch(API_HOST + `?per_page=${pageItemNum}`)
-      // fetch(TEST_HOST)
-      .then(res => res.json())
-      .then(data => setData(data))
-      .catch(err => console.log('Oh noes!', err))
-      .finally(() => setIsLoading(false));
-  }, [pageItemNum]);
+    if (isApiSubscribed) {
+      fetch(API_HOST + `page=${page}`)
+        // fetch(TEST_HOST)
+        .then(res => res.json())
+        .then(data => setData(prev => [...prev, ...data]))
+        .catch(err => console.log('Oh noes!', err))
+        .finally(() => setIsLoading(false));
+    }
+
+    return () => {
+      isApiSubscribed = false;
+    };
+  }, [page]);
 
   return (
     <div className="home">
       <List repoData={data} loadStatus={isLoading} />
-      <Button PageItemMultiplier={setPageItemNum} />
+      <Button pageNumber={setPage} />
     </div>
   );
 };

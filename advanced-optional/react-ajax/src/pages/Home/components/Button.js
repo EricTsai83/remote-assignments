@@ -1,6 +1,6 @@
-const Button = ({PageItemMultiplier}) => {
+const Button = ({pageNumber}) => {
   const updateContent = () => {
-    PageItemMultiplier(prev => prev + 5);
+    pageNumber(prev => prev + 1);
   };
   return (
     <button onClick={updateContent} className="more-button">
