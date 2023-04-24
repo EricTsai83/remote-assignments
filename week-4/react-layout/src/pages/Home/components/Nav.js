@@ -5,8 +5,7 @@ const Nav = () => {
 
   function actionAfterClickNavToggle(trigger) {
     if (trigger) {
-      document.querySelector(".nav-list").style.transition =
-        "transform 300ms cubic-bezier(.5, 0, .5, 1)";
+      document.querySelector(".nav-list").style.transition = "none";
       const hamburger = document.querySelector(".hamburger");
       hamburger.style.position = "fixed";
       hamburger.style.right = 0;
@@ -23,11 +22,22 @@ const Nav = () => {
     document.body.classList.toggle("nav-open");
     return document.body.classList.contains("nav-open");
   }
-  let navStatus;
+
   useEffect(() => {
-    navStatus = toggleMenuMode();
-    actionAfterClickNavToggle(navStatus);
+    let navStatus = toggleMenuMode();
+    if (navToggle === true && navStatus === false) {
+      actionAfterClickNavToggle(navStatus);
+    } else if (navToggle === false && navStatus === true) {
+      actionAfterClickNavToggle(navStatus);
+    }
   }, [navToggle]);
+
+  useEffect(() => {
+    let navStatus = toggleMenuMode();
+    if (navStatus === true) {
+      actionAfterClickNavToggle(navStatus);
+    }
+  }, []);
 
   return (
     <nav className="nav">
