@@ -1,14 +1,14 @@
 import Item from './Item';
 import {v4} from 'uuid'; // 隨機產生 id
 
-const List = ({loadStatus, repoData}) => {
+const List = ({data, isLoading}) => {
   return (
     <div className="repo-result">
-      {loadStatus ? (
+      {isLoading ? (
         <p>Loading...</p>
       ) : (
         // 將 item 物件依序 render 出來
-        repoData.map(item => {
+        data.map(item => {
           const {name, visibility, description, topics} = item;
           return (
             <Item

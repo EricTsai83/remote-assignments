@@ -23,8 +23,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <List repoData={data} loadStatus={isLoading} />
-      <Button PageItemMultiplier={setPageItemNum} />
+      <List data={data} isLoading={isLoading} />
+      <Button setPageItemNum={setPageItemNum} />
     </div>
   );
 };
