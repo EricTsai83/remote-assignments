@@ -1,7 +1,41 @@
+import {useState, useEffect} from "react";
+
 const Nav = () => {
+  const [navToggle, setNavToggle] = useState(false);
+
+  function actionAfterClickNavToggle(trigger) {
+    if (trigger) {
+      document.querySelector(".nav-list").style.transition =
+        "transform 300ms cubic-bezier(.5, 0, .5, 1)";
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.style.position = "fixed";
+      hamburger.style.right = 0;
+    } else {
+      document.querySelector(".nav-list").style.transition = "none";
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.style.position = "relative";
+      hamburger.style.right = "auto";
+    }
+  }
+
+  function toggleMenuMode() {
+    // add class='nav-open' in the body element if it did exist, otherwise remove it
+    document.body.classList.toggle("nav-open");
+    return document.body.classList.contains("nav-open");
+  }
+
+  useEffect(() => {
+    let navStatus = toggleMenuMode();
+    actionAfterClickNavToggle(navStatus);
+  }, [navToggle]);
+
   return (
     <nav className="nav">
-      <button className="nav-toggle">
+      <button
+        className="nav-toggle"
+        onClick={() => {
+          setNavToggle(!navToggle);
+        }}>
         <span id="hamburger-center-line" className="hamburger"></span>
       </button>
       <ul className="nav-list">
