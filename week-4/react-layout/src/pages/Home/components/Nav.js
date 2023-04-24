@@ -23,9 +23,9 @@ const Nav = () => {
     document.body.classList.toggle("nav-open");
     return document.body.classList.contains("nav-open");
   }
-
+  let navStatus;
   useEffect(() => {
-    let navStatus = toggleMenuMode();
+    navStatus = toggleMenuMode();
     actionAfterClickNavToggle(navStatus);
   }, [navToggle]);
 
