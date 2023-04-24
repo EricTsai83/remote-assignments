@@ -1,6 +1,6 @@
-const Button = ({pageNumber}) => {
+const Button = ({setPage}) => {
   const updateContent = () => {
-    pageNumber(prev => prev + 1);
+    setPage(prev => prev + 1);
   };
   return (
     <button onClick={updateContent} className="more-button">

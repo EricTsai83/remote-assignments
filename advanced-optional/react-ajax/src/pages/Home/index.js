@@ -29,8 +29,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <List repoData={data} loadStatus={isLoading} />
-      <Button pageNumber={setPage} />
+      <List data={data} isLoading={isLoading} />
+      <Button setPage={setPage} />
     </div>
   );
 };
