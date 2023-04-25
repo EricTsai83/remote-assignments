@@ -10,7 +10,7 @@ const Home = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div className="homepage-wrapper">
-      <Sidebar />
+      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <Header showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <Main showBox={showBox} setShowBox={setShowBox} />
     </div>

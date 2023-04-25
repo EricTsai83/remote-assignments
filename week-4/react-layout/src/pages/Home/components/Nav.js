@@ -1,13 +1,11 @@
 import {useEffect} from "react";
 
 const Nav = ({showSidebar, setShowSidebar}) => {
-  function toggleMenuMode() {
-    // add/remove class='nav-open' in the homepage-wrapper element if it did exist, otherwise remove it
-    document.querySelector(".homepage-wrapper").classList.toggle("nav-open");
-  }
-
   useEffect(() => {
-    toggleMenuMode();
+    if (showSidebar === true) {
+      document.querySelector(".side-bar-wrapper ").style.transform =
+        "translateX(5%)";
+    }
   }, [showSidebar]);
 
   return (
